@@ -97,6 +97,10 @@ form input[type="submit"]:hover {
   justify-content: space-between;
 }
 
+/* .list p {
+  flex: 85%;
+} */
+
 .list .icon-remove svg {
   fill: red;
   cursor: pointer;
