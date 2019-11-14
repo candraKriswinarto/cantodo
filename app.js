@@ -15,10 +15,10 @@ function addItem(item) {
 }
 
 // show item from localStorage
-let tasks = JSON.parse(localStorage.tasks);
-tasks.map((item) => {
-  addItem(item);
-});
+// let tasks = JSON.parse(localStorage.tasks);
+// tasks.map((item) => {
+//   addItem(item);
+// });
 
 
 class Task {
@@ -68,11 +68,16 @@ class UI {
     if(element.className.baseVal === 'trash') {
       // element.parentElement.parentElement.style.display = "none";
       let tasks = JSON.parse(localStorage.tasks);
+
       tasks.forEach((item) => {
         if(item == element.parentElement.parentElement.innerText) {
-          
+      
+          tasks.filter((tasks) => {
+            return tasks !== item;
+          })
         }
       });
+      console.log(tasks);
     }
   }
 }
